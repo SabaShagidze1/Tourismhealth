@@ -74,6 +74,350 @@ html {
   font-weight: bold;
 }
 
+/* Card Carousel */
+.exp-header {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.card-carousel-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.view-all {
+  padding-bottom: 1rem;
+  text-decoration: none;
+  color: var(--main);
+  transition: all 0.1s;
+}
+.view-all:hover {
+  text-decoration: none;
+  color: var(--main);
+  font-weight: bold;
+}
+
+.cardcar-wrapper {
+  max-width: 80%;
+  width: 100%;
+  position: relative;
+}
+
+.cardcar-wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+
+.cardcar-wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+
+.cardcar-wrapper i:first-child {
+  left: -70px;
+  z-index: 1000;
+}
+.cardcar-wrapper i:last-child {
+  right: -70px;
+}
+
+.cardcar-wrapper .cardcar-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 4) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+.cardcar-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.cardcar-carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.cardcar-carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.cardcar-carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.cardcar-carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardcar-carousel .card {
+  scroll-snap-align: start;
+  height: 420px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.cardcar-carousel .card .img {
+  background: var(--main);
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+
+.card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+
+.cardcar-carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin: 30px 0 5px;
+  text-align: center;
+}
+
+.cardcar-carousel .card span {
+  color: #6a6d78;
+  font-size: 1.1rem;
+  padding-bottom: 1rem;
+}
+
+.cardcar-carousel .card a {
+  color: var(--main);
+  font-weight: bold;
+  border: 1px solid var(--main);
+  width: 9rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.card a:hover {
+  background: var(--main);
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Food */
+.food-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 5rem;
+}
+.food-wrap-left {
+  width: 100%;
+}
+
+.food-wrap-Right {
+  display: flex;
+  gap: 1rem;
+}
+
+.food-card-left h3 {
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.6rem;
+}
+.food-card-right h3 {
+  font-size: 1rem;
+  color: #fff;
+  padding: 0.6rem;
+}
+
+.food-card-left {
+  width: 16rem;
+  height: 25rem;
+  background-image: linear-gradient(
+      rgba(40, 40, 40, 0.6),
+      rgba(40, 40, 40, 0.6)
+    ),
+    url("../images/food/khachapuri.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.food-card-left:hover {
+  transform: scale(1.2);
+}
+
+.food-card-right {
+  width: 16rem;
+  height: 25rem;
+  background-image: linear-gradient(
+      rgba(40, 40, 40, 0.6),
+      rgba(40, 40, 40, 0.6)
+    ),
+    url("../images/food/Walnut.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.food-card-right:hover {
+  transform: scale(1.2);
+}
+
+.foodbtn {
+  border: 1px solid var(--main);
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: var(--main);
+  transition: all 0.3s;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+.foodbtn:hover {
+  text-decoration: none;
+  color: #fff;
+  background: var(--main);
+}
+
+/* Wine */
+.wine-wrap {
+  background-image: linear-gradient(
+      rgba(40, 40, 40, 0.6),
+      rgba(40, 40, 40, 0.6)
+    ),
+    url("../images/food/winery.webp");
+  background-position: center;
+  background-size: cover;
+  height: 17rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  padding: 0 2rem;
+}
+
+.winebtn {
+  width: 8rem;
+  border: 1px solid #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: #fff;
+  transition: all 0.3s;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.winebtn:hover {
+  text-decoration: none;
+  color: #fff;
+  background: var(--main);
+  border: 1px solid var(--main);
+}
+
+/* Health */
+.health-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+  padding: 5rem;
+}
+
+.health-left {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.healthbtn {
+  width: 8rem;
+  border: 1px solid var(--main);
+  padding: 0.5rem;
+  border-radius: 10px;
+  color: var(--main);
+  transition: all 0.3s;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.healthbtn:hover {
+  text-decoration: none;
+  color: #fff;
+  background: var(--main);
+  border: 1px solid var(--main);
+}
+
+.health-right img {
+  width: 100%;
+}
+
+@media screen and (max-width: 900px) {
+  .cardcar-wrapper .cardcar-carousel {
+    grid-auto-columns: calc((100% / 2) - 9px) !important;
+  }
+  .cardcar-wrapper i {
+    display: none !important;
+  }
+  .food-wrap-left {
+    width: 100%;
+  }
+  .food-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+  .food-wrap-Right {
+    justify-content: center;
+  }
+  .wine-wrap {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cardcar-wrapper .cardcar-carousel {
+    grid-auto-columns: calc((100% / 1) - 9px) !important;
+  }
+  .cardcar-wrapper i {
+    display: none !important;
+  }
+}
+
 @media (max-width: 990px) {
   .landing-wrap {
     text-align: center;
