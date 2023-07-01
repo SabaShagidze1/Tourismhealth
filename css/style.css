@@ -6,6 +6,7 @@
 
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 :root {
@@ -418,6 +419,23 @@ html {
   transition: all 0.3s;
 }
 
+.contact-wrap {
+  background-image: linear-gradient(
+      rgba(40, 40, 40, 0.6),
+      rgba(40, 40, 40, 0.6)
+    ),
+    url("../images/contact/contacttbilisi.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 2rem;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+.contact-wrap ul {
+  list-style-type: none;
+}
+
 .hlthcardbtn {
   width: 8rem;
   border: 1px solid var(--main);
@@ -436,7 +454,6 @@ html {
   background: var(--main);
   border: 1px solid var(--main);
 }
-
 
 @media screen and (max-width: 900px) {
   .cardcar-wrapper .cardcar-carousel {
