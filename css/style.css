@@ -79,6 +79,7 @@ html {
 .exp-header {
   font-size: 1.4rem;
   font-weight: bold;
+  text-align: center;
 }
 .card-carousel-container {
   display: flex;
@@ -461,7 +462,7 @@ html {
       rgba(40, 40, 40, 0.6),
       rgba(40, 40, 40, 0.6)
     ),
-    url("../images/attractions/batumi.webp");
+    url("../images/attractions/Batumi_sunset_2.jpg");
 }
 
 .attractions-card-wrap {
