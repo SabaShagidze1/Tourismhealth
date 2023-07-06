@@ -527,6 +527,78 @@ html {
   font-weight: bold;
 }
 
+/* Med */
+#medLanding {
+  background-image: linear-gradient(
+      rgba(40, 40, 40, 0.6),
+      rgba(40, 40, 40, 0.6)
+    ),
+    url("../images/med/medtbilisi.jpg");
+}
+
+.med-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+}
+
+.med-header {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.med-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.med-text-two {
+  color: var(--main);
+  font-weight: bold;
+}
+
+.med-card-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.med-card {
+  display: flex;
+  flex-direction: column;
+  height: 40rem;
+  width: 25%;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.med-card-image {
+  width: 100%;
+}
+
+.med-card-image img {
+  width: 100%;
+}
+
+.med-card-header p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.med-card-button a {
+  color: black;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+}
+.med-card-button a:hover {
+  color: var(--main);
+}
+
 @media screen and (max-width: 900px) {
   .cardcar-wrapper .cardcar-carousel {
     grid-auto-columns: calc((100% / 2) - 9px) !important;
